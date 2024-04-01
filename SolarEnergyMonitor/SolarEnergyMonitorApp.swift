@@ -13,18 +13,21 @@ struct MyApp: App {
     @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     
     var body: some Scene {
-        Settings {
-            Text("Settings or Configuration View")
-        }
+        Settings {}
     }
 }
 
 class AppDelegate: NSObject, NSApplicationDelegate {
     var statusItem: NSStatusItem?
+    var popover = NSPopover()
+
     var viewModel = MenuBarViewModel()
     var cancellables = Set<AnyCancellable>()
 
     func applicationDidFinishLaunching(_ notification: Notification) {
+        popover.behavior = .transient
+        popover.contentViewController = NSHostingController(rootView: ContentView(viewModel: viewModel))
+        
         statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
         
         viewModel.$consumedPower.merge(with: viewModel.$generatedPower)
@@ -49,6 +52,19 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             }
             let attributedTitle = NSAttributedString(string: textString, attributes: attributes)
             button.attributedTitle = attributedTitle
+            button.action = #selector(menuButtonAction(sender:))
+        }
+    }
+    
+    @objc func menuButtonAction(sender: AnyObject) {
+        guard let button = self.statusItem?.button else { return }
+        if self.popover.isShown {
+            self.popover.performClose(sender)
+        } else {
+            // ポップアップを表示
+            self.popover.show(relativeTo: button.bounds, of: button, preferredEdge: NSRectEdge.minY)
+            // 他の位置をタップすると消える
+            self.popover.contentViewController?.view.window?.makeKey()
         }
     }
 }

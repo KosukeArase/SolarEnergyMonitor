@@ -12,6 +12,7 @@
 		FB6A66072BBA8BD700CE9041 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB6A66062BBA8BD700CE9041 /* Preview Assets.xcassets */; };
 		FB6A660F2BBA8C9C00CE9041 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6A660E2BBA8C9C00CE9041 /* MenuView.swift */; };
 		FB6A66112BBA91A800CE9041 /* MenuBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6A66102BBA91A800CE9041 /* MenuBarViewModel.swift */; };
+		FBD9B9272BBACA16007F29F9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBD9B9262BBACA16007F29F9 /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		FB6A660E2BBA8C9C00CE9041 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 		FB6A66102BBA91A800CE9041 /* MenuBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarViewModel.swift; sourceTree = "<group>"; };
 		FB6A66122BBA93F700CE9041 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		FBD9B9262BBACA16007F29F9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 			children = (
 				FB6A66122BBA93F700CE9041 /* Info.plist */,
 				FB6A65FF2BBA8BD500CE9041 /* SolarEnergyMonitorApp.swift */,
+				FBD9B9262BBACA16007F29F9 /* ContentView.swift */,
 				FB6A66102BBA91A800CE9041 /* MenuBarViewModel.swift */,
 				FB6A660E2BBA8C9C00CE9041 /* MenuView.swift */,
 				FB6A66032BBA8BD700CE9041 /* Assets.xcassets */,
@@ -146,6 +149,7 @@
 			files = (
 				FB6A66112BBA91A800CE9041 /* MenuBarViewModel.swift in Sources */,
 				FB6A660F2BBA8C9C00CE9041 /* MenuView.swift in Sources */,
+				FBD9B9272BBACA16007F29F9 /* ContentView.swift in Sources */,
 				FB6A66002BBA8BD500CE9041 /* SolarEnergyMonitorApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -33,7 +33,6 @@ class MenuBarViewModel: ObservableObject {
         configuration.timeoutIntervalForRequest = 3
         configuration.timeoutIntervalForResource = 3
         self.session = URLSession(configuration: configuration)
-        print("init")
 
         startFetching()
     }
