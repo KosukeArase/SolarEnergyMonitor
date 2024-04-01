@@ -61,9 +61,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         if self.popover.isShown {
             self.popover.performClose(sender)
         } else {
-            // ポップアップを表示
+            NotificationCenter.default.post(name: NSNotification.Name("UpdateContentView"), object: self.viewModel.consumedPower)
             self.popover.show(relativeTo: button.bounds, of: button, preferredEdge: NSRectEdge.minY)
-            // 他の位置をタップすると消える
             self.popover.contentViewController?.view.window?.makeKey()
         }
     }
