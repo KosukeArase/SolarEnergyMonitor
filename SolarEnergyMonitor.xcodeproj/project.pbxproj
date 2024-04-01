@@ -8,18 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		FB6A66002BBA8BD500CE9041 /* SolarEnergyMonitorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6A65FF2BBA8BD500CE9041 /* SolarEnergyMonitorApp.swift */; };
-		FB6A66022BBA8BD500CE9041 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6A66012BBA8BD500CE9041 /* ContentView.swift */; };
 		FB6A66042BBA8BD700CE9041 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB6A66032BBA8BD700CE9041 /* Assets.xcassets */; };
 		FB6A66072BBA8BD700CE9041 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB6A66062BBA8BD700CE9041 /* Preview Assets.xcassets */; };
+		FB6A660F2BBA8C9C00CE9041 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6A660E2BBA8C9C00CE9041 /* MenuView.swift */; };
+		FB6A66112BBA91A800CE9041 /* MenuBarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6A66102BBA91A800CE9041 /* MenuBarViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FB6A65FC2BBA8BD500CE9041 /* SolarEnergyMonitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SolarEnergyMonitor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB6A65FF2BBA8BD500CE9041 /* SolarEnergyMonitorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SolarEnergyMonitorApp.swift; sourceTree = "<group>"; };
-		FB6A66012BBA8BD500CE9041 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FB6A66032BBA8BD700CE9041 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FB6A66062BBA8BD700CE9041 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FB6A66082BBA8BD700CE9041 /* SolarEnergyMonitor.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SolarEnergyMonitor.entitlements; sourceTree = "<group>"; };
+		FB6A660E2BBA8C9C00CE9041 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
+		FB6A66102BBA91A800CE9041 /* MenuBarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarViewModel.swift; sourceTree = "<group>"; };
+		FB6A66122BBA93F700CE9041 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,8 +55,10 @@
 		FB6A65FE2BBA8BD500CE9041 /* SolarEnergyMonitor */ = {
 			isa = PBXGroup;
 			children = (
+				FB6A66122BBA93F700CE9041 /* Info.plist */,
 				FB6A65FF2BBA8BD500CE9041 /* SolarEnergyMonitorApp.swift */,
-				FB6A66012BBA8BD500CE9041 /* ContentView.swift */,
+				FB6A66102BBA91A800CE9041 /* MenuBarViewModel.swift */,
+				FB6A660E2BBA8C9C00CE9041 /* MenuView.swift */,
 				FB6A66032BBA8BD700CE9041 /* Assets.xcassets */,
 				FB6A66082BBA8BD700CE9041 /* SolarEnergyMonitor.entitlements */,
 				FB6A66052BBA8BD700CE9041 /* Preview Content */,
@@ -139,7 +144,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB6A66022BBA8BD500CE9041 /* ContentView.swift in Sources */,
+				FB6A66112BBA91A800CE9041 /* MenuBarViewModel.swift in Sources */,
+				FB6A660F2BBA8C9C00CE9041 /* MenuView.swift in Sources */,
 				FB6A66002BBA8BD500CE9041 /* SolarEnergyMonitorApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -279,7 +285,10 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SolarEnergyMonitor/Info.plist;
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "To check the SSID of the current network";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -306,7 +315,10 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SolarEnergyMonitor/Info.plist;
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSLocalNetworkUsageDescription = "To check the SSID of the current network";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
